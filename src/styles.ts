@@ -15,7 +15,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     color: white;
     text-align: center;
-    background: #090a0d;
+    background: radial-gradient(ellipse at center bottom, #AA2536 25%, #1B2141 80%);
     cursor: default;
   }
   h1, h2, h3, h4 {

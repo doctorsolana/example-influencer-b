@@ -1,10 +1,11 @@
-import { useGamba } from 'gamba'
-import React from 'react'
-import styled from 'styled-components'
-import { getConfig } from '../config'
-import { ASSET_LOGO } from '../constants'
+import { useGamba } from "gamba";
+import React from "react";
+import styled from "styled-components";
+import { getConfig } from "../config";
+import { ASSET_LOGO } from "../constants";
 
 const Wrapper = styled.div`
+  font-family: font-family: 'Montserrat', sans-serif;
   position: fixed;
   top: 0;
   width: 100%;
@@ -16,7 +17,7 @@ const Wrapper = styled.div`
   gap: 20px;
   align-items: center;
   z-index: 1;
-`
+`;
 
 const Link = styled.a`
   text-decoration: unset;
@@ -27,26 +28,26 @@ const Link = styled.a`
   & > img {
     margin-right: 1em;
   }
-`
+`;
 
 const Title = styled.h1`
-  font-size: 18px;
+  font-size: 25px;
   font-weight: bold;
-`
+`;
 
 const Subtitle = styled.h2`
   font-weight: normal;
-  font-size: 14px;
+  font-size: 12px;
   color: #ccc;
-`
+`;
 
 export function Header() {
-  const { appLink } = getConfig()
-  const gamba = useGamba()
+  const { appLink } = getConfig();
+  const gamba = useGamba();
 
   return (
     <Wrapper>
-      <Link target="_blank" href={appLink ?? '#'}>
+      <Link target="_blank" href={appLink ?? "#"}>
         <img width="50px" src={ASSET_LOGO} />
         <div>
           <Title>{gamba.config.name}</Title>
@@ -54,5 +55,5 @@ export function Header() {
         </div>
       </Link>
     </Wrapper>
-  )
+  );
 }
